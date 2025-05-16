@@ -1,0 +1,26 @@
+{
+  "name": "mockmock",
+  "version": "0.0.1",
+  "description": "Record, replay, search, stub, and mock test data.",
+  "main": "src/index.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "mock",
+    "test",
+    "stub"
+  ],
+  "author": "Che Fisher",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.2"
+  }
+}

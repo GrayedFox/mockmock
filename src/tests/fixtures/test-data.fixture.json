@@ -1,0 +1,305 @@
+{
+  "contextOne": {
+      "data": {},
+      "sync": {
+        "methodIdOne": [
+          {
+            "mock": {
+              "type": "contextOneMethodIdOneMockOne",
+              "payload": {
+                "apiKey": "key"
+              }
+            }
+          },
+          {
+            "mock": {
+              "type": "contextOneMethodIdOneMockTwo",
+              "payload": {
+                "apiKey": "key",
+                "cart": {
+                  "sessionId": "xxx",
+                  "count": 123,
+                  "pricing": {
+                    "totalPrice": {
+                      "__typename": "Money",
+                      "amount": 279.93,
+                      "currency": "USD",
+                      "displayValue": "$279.93"
+                    },
+                    "subtotalPrice": {
+                      "__typename": "Money",
+                      "amount": 279.93,
+                      "currency": "USD",
+                      "displayValue": "$279.93"
+                    },
+                    "tax": {
+                      "__typename": "Money",
+                      "amount": 3.33,
+                      "currency": "USD",
+                      "displayValue": "$3.33"
+                    },
+                    "shipping": {
+                      "__typename": "Money",
+                      "amount": 25,
+                      "currency": "AUD",
+                      "displayValue": "$25.00"
+                    }
+                  },
+                  "errors": []
+                }
+              }
+            }
+          }
+        ],
+        "methodIdTwo": [
+          {
+            "mock": {
+              "type": "contextOneMethodIdTwoMockOne",
+              "payload": {
+                "apiKey": "key"
+              }
+            }
+          },
+          {
+            "mock": {
+              "type": "contextOneMethodIdTwoMockTwo",
+              "payload": {
+                "apiKey": "key",
+                  "errors": [
+                    {
+                      "message": "error"
+                    }
+                  ]
+                }
+              }
+            }
+        ]
+      },
+      "async": {
+        "fetchCard": [
+          {
+            "mock": {
+              "headers": {
+                "x-powered-by": "Express",
+                "access-control-allow-origin": "*",
+                "content-type": "application/json; charset=utf-8",
+                "x-api-version": "0.0.565",
+                "content-length": "1148",
+                "etag": "W/\"47c-uqZ3buxKgp7lxh2Bipl2zSTWbaI\"",
+                "date": "Fri, 13 Jan 2023 07:44:50 GMT",
+                "via": "1.1 google",
+                "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+              },
+              "url": "https://api.carted.dev/graphql",
+              "method": "fetchCard",
+              "httpVersion": "1.1",
+              "statusCode": 200,
+              "statusMessage": "OK",
+              "body": {
+                "data": {
+                  "productFromUrl": {
+                    "id": "45d441a7-c03a-4781-b0fd-c7faa195bb56",
+                    "title": "Hot Wheels Star Wars Darth Vader Play Case Set",
+                    "description": "The ultimate Battle Rollers Play Case inspired by and modeled after the most iconic character in the Star Wars universe Darth Vader. ",
+                    "priceRange": {
+                      "displayValue": "$15.99"
+                    },
+                    "options": [
+                      {
+                        "id": "5b6f4c8234afa3f157254091a41e510b5c9ac44d",
+                        "name": "Title",
+                        "values": [
+                          "Default Title"
+                        ]
+                      }
+                    ],
+                    "imageConnection": {
+                      "edges": [
+                        {
+                          "node": {
+                            "id": "0",
+                            "originalSrc": "https://cdn.shopify.com/s/files/1/0579/1455/6473/products/e55d0a8e38684c6eb424f96395032167.jpg?v=1645034277"
+                          }
+                        }
+                      ]
+                    },
+                    "availability": {
+                      "inStock": false
+                    },
+                    "variantConnection": {
+                      "totalCount": 1,
+                      "edges": [
+                        {
+                          "node": {
+                            "id": "78b88d4f-3693-434d-be3e-27ac86424e23",
+                            "title": "Hot Wheels Star Wars Darth Vader Play Case Set",
+                            "selectedOptions": [],
+                            "imageConnection": {
+                              "edges": []
+                            },
+                            "offerConnection": {
+                              "edges": [
+                                {
+                                  "node": {
+                                    "id": "5d5c2f9c-46b4-4404-9cbf-ce3051931f4e",
+                                    "price": {
+                                      "amount": 15.99,
+                                      "currency": "USD",
+                                      "displayValue": "$15.99"
+                                    },
+                                    "availability": {
+                                      "inStock": false
+                                    },
+                                    "merchant": {
+                                      "id": "20befe4b-7c7d-46cc-a031-a175c3e5af20",
+                                      "name": "carted-dev-2",
+                                      "url": "https://carted-dev-2.myshopify.com"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+  },
+  "contextTwo": {
+    "data": {},
+    "sync": {
+      "methodIdOne": [
+        {
+          "mock": {
+            "type": "carted:init",
+            "payload": {
+              "apiKey": "key"
+            }
+          }
+        }
+      ],
+      "methodIdTwo": [
+        {
+          "mock": {
+            "type": "carted:init",
+            "payload": {
+              "apiKey": "key"
+            }
+          }
+        },
+        {
+          "mock": {
+            "type": "carted:view_cart",
+            "payload": {
+              "apiKey": "key",
+              "cart": {
+                "__typename": "Cart",
+                "sessionId": "yyy",
+                "count": 5,
+                "pricing": {
+                  "__typename": "SummaryPricing",
+                  "totalPrice": {
+                    "__typename": "Money",
+                    "amount": 279.93,
+                    "currency": "USD",
+                    "displayValue": "$279.93"
+                  },
+                  "subtotalPrice": {
+                    "__typename": "Money",
+                    "amount": 279.93,
+                    "currency": "USD",
+                    "displayValue": "$279.93"
+                  },
+                  "tax": {
+                    "__typename": "Money",
+                    "amount": 0,
+                    "currency": "USD",
+                    "displayValue": "$0.00"
+                  },
+                  "shipping": {
+                    "__typename": "Money",
+                    "amount": 0,
+                    "currency": "USD",
+                    "displayValue": "$0.00"
+                  }
+                },
+                "errors": []
+              }
+            }
+          }
+        }
+      ]
+    },
+    "async": {
+      "updateCart": [
+        {
+          "mock": {
+            "headers": {
+              "x-powered-by": "Express",
+              "access-control-allow-origin": "*",
+              "content-type": "application/json; charset=utf-8",
+              "x-api-version": "0.0.565",
+              "content-length": "41216",
+              "etag": "W/\"a100-3X4HhUO/GI+Z3WosE+lWYsjIzdY\"",
+              "date": "Fri, 13 Jan 2023 07:45:02 GMT",
+              "via": "1.1 google",
+              "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+            },
+            "mixedArray": [ true, false, { "displayValue": "500"}, "displayValue" ],
+            "url": "https://api.carted.dev/graphql",
+            "method": "updateCart",
+            "httpVersion": "1.1",
+            "statusCode": 200,
+            "statusMessage": "OK",
+            "body": {
+              "data": {
+                "cartProductsUpdate": {
+                  "cart": {
+                    "sessionId": "zzz",
+                    "count": 6,
+                    "pricing": {
+                      "totalPrice": {
+                        "amount": 349.93,
+                        "currency": "USD",
+                        "displayValue": "$349.93",
+                        "__typename": "Money"
+                      },
+                      "subtotalPrice": {
+                        "amount": 349.93,
+                        "currency": "USD",
+                        "displayValue": "$349.93",
+                        "__typename": "Money"
+                      },
+                      "tax": {
+                        "amount": 0,
+                        "currency": "USD",
+                        "displayValue": "$0.00",
+                        "__typename": "Money"
+                      },
+                      "shipping": {
+                        "amount": 0,
+                        "currency": "USD",
+                        "displayValue": "$0.00",
+                        "__typename": "Money"
+                      },
+                      "__typename": "SummaryPricing"
+                    },
+                    "errors": [],
+                    "__typename": "Cart"
+                  },
+                  "__typename": "CartResponse"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+}
+}
